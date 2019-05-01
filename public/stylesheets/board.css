@@ -1,0 +1,19 @@
+th,td{
+    padding: 20px;
+    border: 1px solid black;
+}
+table {
+    border: 2px solid black;
+    background-color: white;
+    border-collapse: collapse;
+    width: 30%;
+    margin-top:25px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+body{
+    background-color: #e4685d;
+}

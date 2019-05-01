@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>게시물</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/board.css" />
+</head>
+<body>
+    <table>
+    <div style = "text-align:center">
+    <h1>자유게시판</h1>
+    </div>
+    <thead>
+        <th><p><h2>제목</h2></p></th>
+        <tr><td><pre><%=r.user_title%></pre></td></tr>
+        <th><p><h3>내용</h3></p></th>      
+        <tr><td><pre><%=r.user_contents%></pre></td></tr>
+    </thead>
+     </table>
+    <form action = "/post/<%= r.id %>" method = "POST">
+        <div id="disqus_thread"></div>
+        <script>
+        (function() {           // disqus 댓글 api 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://test-disqus-com-7.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </form>
+</body>
+</html>
